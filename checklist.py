@@ -11,7 +11,6 @@ class ChecklistClass(object):
 		pushy.setText("Print")
 		pushy.clicked.connect(lambda: self.PrintList())
 
-		# borderCSS = "border-style:solid;border-color:rgb(0, 255, 131);border-width:3px;border-radius:5px;background-color:black;color:white;"
 		borderCSS = "border-style:solid;border-color:rgb( 255, 215, 0 );border-width:3px;border-radius:5px;background-color:black;color:white;padding-left:20;"
 
 		self.title = QtWidgets.QLineEdit(window)
@@ -19,17 +18,14 @@ class ChecklistClass(object):
 		self.title.resize(350, 45)
 		self.title.move(125, 90)
 		self.title.setPlaceholderText("Title")
-		# self.title.setAlignment(QtCore.Qt.AlignCenter)
 
 		self.director = QtWidgets.QLineEdit(window)
-		# self.director.setStyleSheet("background-color:white; color:black;")
 		self.director.setStyleSheet(borderCSS)
 		self.director.resize(350, 45)
 		self.director.move(125, 180)
 		self.director.setPlaceholderText("Director")
 
 		self.year = QtWidgets.QLineEdit(window)
-		# self.year.setStyleSheet("background-color:white; color:black;")
 		self.year.setStyleSheet(borderCSS)
 		self.year.resize(100, 45)
 		self.year.move(155, 270)
@@ -37,7 +33,6 @@ class ChecklistClass(object):
 
 		self.language = QtWidgets.QComboBox(window)
 		self.language.addItems(['English', 'Tamil', 'Malayalam', 'Others'])
-		# self.language.setStyleSheet("background-color:white; color:black;")
 		self.language.setStyleSheet(borderCSS)
 		self.language.resize(120,35)
 		self.language.move(325, 275)
