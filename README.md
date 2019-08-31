@@ -19,6 +19,11 @@ Collection `Checklist`
 
 > Screenshots
 
+**Third Commit**
+> seperate CSS file
+
+> Alertation of code
+
 **Future Commits**
 > Data backup
 
