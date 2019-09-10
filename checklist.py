@@ -11,7 +11,7 @@ class ChecklistClass(object):
 		pushy.setText("Print")
 		pushy.clicked.connect(lambda: self.PrintList())
 
-		File = open("/css/input.css", 'r')
+		File = open("css/input.css", 'r')
 		inputCSS = File.read().strip()
 		File.close()
 
