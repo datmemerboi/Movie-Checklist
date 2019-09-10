@@ -29,6 +29,8 @@ Collection `Checklist`
 **Future Commits**
 > Data backup
 
+> List Print UI
+
 > Switch modes
 
 > Genre of movies
