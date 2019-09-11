@@ -53,9 +53,9 @@ class ChecklistClass(object):
 
 	def PrintList(self):
 		mongoconn = MongoClient("mongodb://localhost:27017")
-		print("Printing List:")
+		print("\r")
 		for index in ( mongoconn.Movie.Checklist.find() ):
-			print(index)
+			print(index['Title'],"||",index['Director'],"||",index['Year'],"||",index['Language'])
 
 	def InsertChecked(self):
 		mongoconn = MongoClient("mongodb://localhost:27017")
