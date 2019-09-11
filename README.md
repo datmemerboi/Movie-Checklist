@@ -5,9 +5,9 @@
 As an avid movie lover, I have a large list of movies completed and yet to watch. As I had to keep track of that, here's an application to checklist the movies I have completed.
 
 *Note:* 
-Default Mongo connection`mongodb://localhost:27017`
-Database `Movie`
-Collection `Checklist`
+Default Mongo connection:`mongodb://localhost:27017`
+Database: `Movie`
+Collection: `Checklist`
 
 (If the db is altered, it will be updated here)
 
@@ -26,16 +26,25 @@ Collection `Checklist`
 
 > Screenshots
 
+**Fourth Commit**
+> Improved Print Checklist
+
+> Screenshot
+
 **Future Commits**
-> Data backup
+> Check Empty Entry
 
 > List Print UI
+
+> UI for completed list
+
+> Data backup
 
 > Switch modes
 
 > Genre of movies
 
-> UI for completed list
+> Arrange by Directors
 
 > UI modifications
 
