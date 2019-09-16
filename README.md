@@ -4,7 +4,7 @@
 
 As an avid movie lover, I have a large list of movies completed and yet to watch. As I had to keep track of them, here's an application to checklist the movies you have completed.
 
-You will require *Python, PyQt5, MongoDB* and *MongoClient*. After installing these, just run `index.py`.
+You will require *Python, PyQt5, MongoDB* and *MongoClient*. After installing them, just run `index.py`.
 
 *Note:* 
 
@@ -21,40 +21,27 @@ Collection: `Checklist`
 
 **Second Commit**
 > Slight Alterations of code
-
 > Screenshots
 
 **Third Commit**
 > Seperate CSS files
-
 > Code Alterations
-
 > Screenshots
 
 **Fourth Commit**
 > Improved Print Checklist
-
 > Screenshot
 
 **Future Commits**
 > Check Empty Entry
-
-> List Print UI
-
-> UI for completed list
-
 > Data backup
-
-> Switch modes
-
-> Genre of movies
-
 > Arrange by Directors
-
-> UI modifications
-
-> List for unfinished / yet to watch movies
-
-> Watched & Unwatched status progression
-
+> Search Bar
+> Check DB if Existing
+> Genre of movies
 > Portable application
+> List Print UI
+> UI for completed list
+> Switch modes
+> List for unfinished / yet to watch movies
+> Watched & Unwatched status progression
