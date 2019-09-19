@@ -61,7 +61,6 @@ class ChecklistClass(object):
 		for index in ( mongoconn.Movie.Checklist.find() ):
 			print("\033[1m"+index['Title'],"\033[0m | ",index['Director']," | ",index['Year']," | ",index['Language'])
 
-
 	def InsertChecked(self):
 		mongoconn = MongoClient("mongodb://localhost:27017")
 		row = {"Title":self.title.text().strip(), "Director":self.director.text().strip(), "Year":self.year.text().strip(), "Language":self.language.currentText(), "Remarks":self.remarks.toPlainText().strip()};
