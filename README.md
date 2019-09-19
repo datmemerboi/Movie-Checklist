@@ -7,9 +7,9 @@ As an avid movie lover, I have a large list of movies completed and yet to watch
 Built on Linux environment (Elementary OS).
 
 ### Requirements
-*Python, PyQt5, MongoDB* and *MongoClient*. After installing them, just run `index.py`.
+**Python, PyQt5, MongoDB** and **MongoClient**. After installing them, just run `index.py`.
 
-*Note:* 
+### Note 
 
 Default Mongo connection:`mongodb://localhost:27017`
 
@@ -18,24 +18,20 @@ Database: `Movie`
 Collection: `Checklist`
 
 **First Commit**
-> Basic Build of app
+> - Basic Build of app
 
 **Second Commit**
-> Slight Alterations of code
-
-> Screenshots
+> - Slight Alterations of code
+> - Screenshots
 
 **Third Commit**
-> Seperate CSS files
-
-> Code Alterations
-
-> Screenshots
+> - Seperate CSS files
+> - Code Alterations
+> - Screenshots
 
 **Fourth Commit**
-> Improved Print Checklist
-
-> Screenshot
+> - Improved Print Checklist
+> - Screenshot
 
 **Fifth Commit**
 > - Different CSS for Buttons
