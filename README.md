@@ -38,8 +38,8 @@ Collection: `Checklist`
 > Screenshot
 
 **Fifth Commit**
-> * Different CSS for Buttons
-> * Improved Print Checklist
+> - Different CSS for Buttons
+> - Improved Print Checklist
 
 **Future Commits**
 > Check Empty Entry
