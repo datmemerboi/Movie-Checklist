@@ -37,6 +37,9 @@ Collection: `Checklist`
 > - Different CSS for Buttons
 > - Improved Print Checklist
 
+**Sixth Commit**
+> - New Window for Current List
+
 **Future Commits**
 > Check Empty Entry
 
