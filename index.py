@@ -7,6 +7,6 @@ if __name__ == '__main__':
 	app.setWindowIcon(QtGui.QIcon('CamIcon.png'))
 	ThisWindow = QtWidgets.QMainWindow()
 	window.WindowClass().WindowFn(ThisWindow)
-	# checklist.ChecklistClass().ChecklistFn(ThisWindow)
+	checklist.ChecklistClass().ChecklistFn(ThisWindow)
 	ThisWindow.show()
 	sys.exit(app.exec_())
