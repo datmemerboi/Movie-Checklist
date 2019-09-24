@@ -38,7 +38,7 @@ Collection: `Checklist`
 > - Improved Print Checklist
 
 **Sixth Commit**
-> - New Window for Current List
+> - Fixed Window size
 
 **Future Commits**
 > Check Empty Entry
