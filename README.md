@@ -41,6 +41,9 @@ Collection: `Checklist`
 **Sixth Commit**
 > - Fixed Window size
 
+**Seventh Commit**
+> - `setup.py` file
+
 **Future Commits**
 > Check Empty Entry
 
