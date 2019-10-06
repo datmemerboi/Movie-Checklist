@@ -8,6 +8,7 @@ Built on Linux environment (Elementary OS).
 
 ### Requirements
 **Python, PyQt5, MongoDB** and **MongoClient**. After installing them, just run `index.py`.
+Running `setup.py` would help you install the required softwares.
 
 ### Note 
 
