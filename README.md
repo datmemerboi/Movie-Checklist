@@ -44,9 +44,11 @@ Collection: `Checklist`
 **Seventh Commit**
 > - `setup.py` file
 
-**Future Commits**
-> Check Empty Entry
+**Eight Commit**
+> - Empty Data Entry check
+> - Existing Data alert 
 
+**Future Commits**
 > Data backup
 
 > Arrange by Directors
@@ -58,8 +60,6 @@ Collection: `Checklist`
 > Genre of movies
 
 > Portable application
-
-> List Print UI
 
 > UI for completed list
 
