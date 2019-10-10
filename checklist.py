@@ -61,12 +61,32 @@ class ChecklistClass(object):
 		for index in ( mongoconn.Movie.Checklist.find() ):
 			print("\033[1m"+index['Title'],"\033[0m | ",index['Director']," | ",index['Year']," | ",index['Language'])
 
+	def CheckExistingFn(self):
+		mongoconn = MongoClient("monogodb://localhost:27017")
+		query = mongoconn.Movie.Checklist.find({"Title":self.title.text().strip()})
+		for i in query:
+			if(i['Title'] == self.title.text().strip()):
+				ExistingMessage = QtWidgets.QMessageBox()
+				ExistingMessage.setText("Already in List")
+				ExistingMessage.setWindowTitle("Done!")
+				ExistingMessage.exec_()
+				return(True)
+				break
+		mongoconn.close()
+
 	def InsertChecked(self):
-		mongoconn = MongoClient("mongodb://localhost:27017")
-		row = {"Title":self.title.text().strip(), "Director":self.director.text().strip(), "Year":self.year.text().strip(), "Language":self.language.currentText(), "Remarks":self.remarks.toPlainText().strip()};
-		query = mongoconn.Movie.Checklist.update(row, row, upsert = True)
-		print("-- New Item Added --")
-		CheckedMessage = QtWidgets.QMessageBox()
-		CheckedMessage.setText("Checked!")
-		CheckedMessage.setWindowTitle(" ")
-		CheckedMessage.exec_()
+		if(not(self.CheckExistingFn())):
+			row = {"Title":self.title.text().strip(), "Director":self.director.text().strip(), "Year":self.year.text().strip(), "Language":self.language.currentText(), "Remarks":self.remarks.toPlainText().strip()}
+			if(row['Title']==''):
+				NullMessage = QtWidgets.QMessageBox()
+				NullMessage.setText("No values to enter")
+				NullMessage.setWindowTitle("Error!")
+				NullMessage.exec_()
+			else:
+				mongoconn = MongoClient("mongodb://localhost:27017")
+				query = mongoconn.Movie.Checklist.update(row, row, upsert = True)
+				CheckedMessage = QtWidgets.QMessageBox()
+				CheckedMessage.setText("Checked!")
+				CheckedMessage.setWindowTitle(" ")
+				CheckedMessage.exec_()
+				mongoconn.close()
