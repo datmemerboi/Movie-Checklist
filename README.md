@@ -16,7 +16,7 @@ Default Mongo connection:`mongodb://localhost:27017`
 
 Database: `Movie`
 
-Collection: `Checklist`
+Collection: `Checklist`, `Recommend`
 
 **First Commit**
 > - Basic Build of app
@@ -47,6 +47,12 @@ Collection: `Checklist`
 **Eight Commit**
 > - Empty Data Entry check
 > - Existing Data alert 
+
+**Ninth Commit**
+> - Recommend Button added
+> - `RecommendFn` included
+> - `.gitignore` file added
+> - minor changes in existing code
 
 **Future Commits**
 > Data backup
