@@ -1,5 +1,6 @@
 from PyQt5 import QtWidgets, QtCore
 from pymongo import MongoClient
+recommendBool = False
 
 class ChecklistClass(object):
 	def ChecklistFn(self, window):
@@ -16,8 +17,9 @@ class ChecklistClass(object):
 		PrintBtn = QtWidgets.QPushButton(window)
 		PrintBtn.setStyleSheet(buttonCSS)
 		PrintBtn.move(500, 0)
+		PrintBtn.resize(70, 30)
 		PrintBtn.setText("Print")
-		PrintBtn.clicked.connect(lambda: self.PrintList())
+		PrintBtn.clicked.connect(lambda: self.PrintListFn())
 
 		self.title = QtWidgets.QLineEdit(window)
 		self.title.setStyleSheet(inputCSS)
@@ -49,20 +51,29 @@ class ChecklistClass(object):
 		self.remarks.resize(350, 150)
 		self.remarks.move(125, 340)
 
-		CheckBtn = QtWidgets.QPushButton(window)
-		CheckBtn.setStyleSheet(buttonCSS)
-		CheckBtn.move(235, 525)
-		CheckBtn.setText("Check")
-		CheckBtn.clicked.connect(lambda: self.InsertChecked())
+		AddBtn = QtWidgets.QPushButton(window)
+		AddBtn.setStyleSheet(buttonCSS)
+		AddBtn.move(230, 525)
+		AddBtn.resize(70, 30)
+		AddBtn.setText("Check")
+		AddBtn.clicked.connect(lambda: self.InsertCheckedFn())
 
-	def PrintList(self):
+		recommendBtn = QtWidgets.QCheckBox(window)
+		recommendBtn.setChecked(False)
+		recommendBtn.setStyleSheet(buttonCSS)
+		recommendBtn.setText("Recommend")
+		recommendBtn.move(320, 525)
+		recommendBtn.resize(100, 30)
+		recommendBtn.stateChanged.connect(lambda:self.RecommendFn())
+
+	def PrintListFn(self):
 		mongoconn = MongoClient("mongodb://localhost:27017")
 		print("\r")
 		for index in ( mongoconn.Movie.Checklist.find() ):
 			print("\033[1m"+index['Title'],"\033[0m | ",index['Director']," | ",index['Year']," | ",index['Language'])
 
 	def CheckExistingFn(self):
-		mongoconn = MongoClient("monogodb://localhost:27017")
+		mongoconn = MongoClient("mongodb://localhost:27017")
 		query = mongoconn.Movie.Checklist.find({"Title":self.title.text().strip()})
 		for i in query:
 			if(i['Title'] == self.title.text().strip()):
@@ -71,12 +82,11 @@ class ChecklistClass(object):
 				ExistingMessage.setWindowTitle("Done!")
 				ExistingMessage.exec_()
 				return(True)
-				break
 		mongoconn.close()
 
-	def InsertChecked(self):
+	def InsertCheckedFn(self):
+		row = {"Title":self.title.text().strip(), "Director":self.director.text().strip(), "Year":self.year.text().strip(), "Language":self.language.currentText(), "Remarks":self.remarks.toPlainText().strip()};
 		if(not(self.CheckExistingFn())):
-			row = {"Title":self.title.text().strip(), "Director":self.director.text().strip(), "Year":self.year.text().strip(), "Language":self.language.currentText(), "Remarks":self.remarks.toPlainText().strip()}
 			if(row['Title']==''):
 				NullMessage = QtWidgets.QMessageBox()
 				NullMessage.setText("No values to enter")
@@ -86,7 +96,13 @@ class ChecklistClass(object):
 				mongoconn = MongoClient("mongodb://localhost:27017")
 				query = mongoconn.Movie.Checklist.update(row, row, upsert = True)
 				CheckedMessage = QtWidgets.QMessageBox()
-				CheckedMessage.setText("Checked!")
-				CheckedMessage.setWindowTitle(" ")
+				CheckedMessage.setText("Added to checklist")
+				CheckedMessage.setWindowTitle("Done!")
 				CheckedMessage.exec_()
+				if(recommendBool):
+					query = mongoconn.Movie.Recommend.update(row, row, upsert=True)
 				mongoconn.close()
+
+	def RecommendFn(self):
+		global recommendBool
+		recommendBool = not(recommendBool)
