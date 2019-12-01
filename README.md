@@ -54,23 +54,14 @@ Collection: `Checklist`, `Recommend`
 > - `.gitignore` file added
 > - minor changes in existing code
 
-**Future Commits**
-> Data backup
+**Tenth Checkpoint**
+> - Data backup
+> - Search Director's Works
+> - Search by Year
+> - Search by Language
+> - Already Existing
+> - UI for completed list
+> - css files added
 
-> Arrange by Directors
-
-> Search Bar
-
-> Check DB if Existing
-
-> Genre of movies
-
+**Future Additions**
 > Portable application
-
-> UI for completed list
-
-> Switch modes
-
-> List for unfinished / yet to watch movies
-
-> Watched & Unwatched status progression
