@@ -35,7 +35,7 @@ class SearchLangClass(object):
 		self.ListBox.setText("")
 		if(lang != "" or lang!="Select"):
 			mongoconn = MongoClient("mongodb://localhost:27017")
-			for index in (mongoconn.Movie.Checklist.find({"Language":{'$regex' : lang, '$options' : 'i'}})):
+			for index in (mongoconn.Movie.Checklist.find({"Language": lang})):
 				if(self.ListBox.toPlainText().strip()==""):
 					self.ListBox.setText(index['Title']+" | "+index['Director']+" | "+index['Year']+" | "+index['Language'])
 				else:
