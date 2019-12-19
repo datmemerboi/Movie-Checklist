@@ -63,5 +63,9 @@ Collection: `Checklist`, `Recommend`
 > - UI for completed list
 > - css files added
 
+**19 Dec 2019 (Not number future commits)**
+> - Altered `printyear`
+> - Backup of my checklist
+
 **Future Additions**
 > Portable application
