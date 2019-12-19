@@ -35,7 +35,7 @@ class SearchYearClass(object):
 		self.ListBox.setText("")
 		if(year != ""):
 			mongoconn = MongoClient("mongodb://localhost:27017")
-			for index in (mongoconn.Movie.Checklist.find({"Year":{'$regex' : year, '$options' : 'i'}})):
+			for index in (mongoconn.Movie.Checklist.find({"Year":year})):
 				if(self.ListBox.toPlainText().strip()==""):
 					self.ListBox.setText(index['Title']+" | "+index['Director']+" | "+index['Year']+" | "+index['Language'])
 				else:
