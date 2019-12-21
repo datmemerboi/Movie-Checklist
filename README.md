@@ -1,7 +1,6 @@
 Movie Checklist
 =
-## Maintain a list of movies
-### Using Python 3, PyQt5, MongoDB, MongoClient
+## Using Python 3, PyQt5, MongoDB, MongoClient
 
 As an avid movie lover, I have a large list of movies completed and yet to watch. As I had to keep track of them, here's an application to checklist the movies you have completed.
 
@@ -39,10 +38,7 @@ Collection: `Checklist`, `Recommend`
 > - `.gitignore` file added
 > - minor changes in existing code
 > - Data backup
-> - Search Director's Works
-> - Search by Year
-> - Search by Language
-> - Already Existing
+> - Search Director's Works, by Year, by Language
 > - UI for completed list
 > - css files added
 > - Altered `printyear`
