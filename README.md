@@ -1,4 +1,5 @@
-# Movie Checklist
+Movie Checklist
+=
 ## Maintain a list of movies
 ### Using Python 3, PyQt5, MongoDB, MongoClient
 
@@ -8,7 +9,7 @@ Built on Linux environment (Elementary OS).
 
 ### Requirements
 **Python, PyQt5, MongoDB** and **MongoClient**. After installing them, just run `index.py`.
-Running `setup.py` would help you install the required softwares.
+Running `setup.py` would help you install the required softwares. (Written for Linux system, please do check if it works for Windows)
 
 ### Note 
 
@@ -18,43 +19,25 @@ Database: `Movie`
 
 Collection: `Checklist`, `Recommend`
 
-**First Commit**
+**Working till date**
 > - Basic Build of app
-
-**Second Commit**
 > - Slight Alterations of code
 > - Screenshots
-
-**Third Commit**
 > - Seperate CSS files
 > - Code Alterations
 > - Screenshots
-
-**Fourth Commit**
 > - Improved Print Checklist
 > - Screenshot
-
-**Fifth Commit**
 > - Different CSS for Buttons
 > - Improved Print Checklist
-
-**Sixth Commit**
 > - Fixed Window size
-
-**Seventh Commit**
 > - `setup.py` file
-
-**Eight Commit**
 > - Empty Data Entry check
 > - Existing Data alert 
-
-**Ninth Commit**
 > - Recommend Button added
 > - `RecommendFn` included
 > - `.gitignore` file added
 > - minor changes in existing code
-
-**Tenth Checkpoint**
 > - Data backup
 > - Search Director's Works
 > - Search by Year
@@ -62,10 +45,8 @@ Collection: `Checklist`, `Recommend`
 > - Already Existing
 > - UI for completed list
 > - css files added
-
-**19 Dec 2019 (Not number future commits)**
 > - Altered `printyear`
-> - Backup of my checklist
+> - Changed date format
 
 **Future Additions**
 > Portable application
