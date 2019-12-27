@@ -10,6 +10,7 @@ def recentDateFn():
 		if(match):
 			print(name+" is most recent")
 			foundit = True
+			# os.system("mongoimport --db "+database+" --collection "+collection+" --type json --file backup/"+name)
 			break
 
 if(not(foundit)):
