@@ -1,14 +1,14 @@
 Movie Checklist
 =
-## Using Python 3, PyQt5, MongoDB, MongoClient
+## Python 3 | PyQt5 | MongoDB | MongoClient
 
 As an avid movie lover, I have a large list of movies completed and yet to watch. As I had to keep track of them, here's an application to checklist the movies you have completed.
 
-Built on Linux environment (Elementary OS).
+Built on Linux environment (elementary OS)
 
 ### Requirements
 **Python, PyQt5, MongoDB** and **MongoClient**. After installing them, just run `index.py`.
-Running `setup.py` would help you install the required softwares. (Written for Linux system, please do check if it works for Windows)
+Running `setup.py` would help you install the required softwares. (Built for Linux system, please do check if it works for Windows)
 
 ### Note 
 
@@ -20,14 +20,9 @@ Collection: `Checklist`, `Recommend`
 
 **Working till date**
 > - Basic Build of app
-> - Slight Alterations of code
-> - Screenshots
 > - Seperate CSS files
-> - Code Alterations
 > - Screenshots
 > - Improved Print Checklist
-> - Screenshot
-> - Different CSS for Buttons
 > - Improved Print Checklist
 > - Fixed Window size
 > - `setup.py` file
