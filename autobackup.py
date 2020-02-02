@@ -1,18 +1,29 @@
-# Automatically importing most recent backup into Mongodb
 import os, re; from datetime import datetime
-thisyear = datetime.now().strftime("%y");thismonth = datetime.now().strftime("%m");thisday = datetime.now().strftime("%d")
+thisyear = datetime.now().strftime("%Y")
+thismonth = datetime.now().strftime("%m")
+thisday = datetime.now().strftime("%d")
+print(thisyear, thismonth, thisday)
 
 foundit = False
 
-def recentDateFn():
-	for name in os.listdir("backup"):
-		match = re.findall("Recommend"+"_"+thisday+"-"+thismonth+"-"+thisyear+"_[0-9]+:[0-9]+.json$", name)
-		if(match):
-			print(name+" is most recent")
-			foundit = True
-			# os.system("mongoimport --db "+database+" --collection "+collection+" --type json --file backup/"+name)
-			break
+def findYear(argument):
+	global thisyear
+	if(re.findall(".*"+thisyear+".json", argument)):
+		return True
 
-if(not(foundit)):
-	thisday = str(int(thisday)-1)
-	recentDateFn()
+def findMonth(argument):
+	global thismonth
+	if(re.findall(".*"+thismonth+"-[0-9]{4}.json", argument)):
+		return True
+
+def findDay(argument):
+	global thisday, thismonth
+	if(re.findall(".*"+thisday+"-[0-9]{2}-[0-9]{4}.json", argument)):
+		return True
+
+for name in os.listdir("backup"):
+	YearRet = findYear(name)
+	MonthRet = findMonth(name)
+	DayRet = findDay(name)
+	if(YearRet and MonthRet and DayRet):
+		print(name+" is it")
