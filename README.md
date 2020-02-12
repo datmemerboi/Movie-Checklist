@@ -4,7 +4,7 @@ Movie Checklist
 
 As an avid movie lover, I have a large list of movies completed and yet to watch. As I had to keep track of them, here's an application to checklist the movies you have completed.
 
-Built on Linux environment (elementary OS)
+Built on Linux environment (*elementary OS*)
 
 ### Requirements
 **Python, PyQt5, MongoDB** and **MongoClient**. After installing them, just run `index.py`.
@@ -38,6 +38,7 @@ Collection: `Checklist`, `Recommend`
 > - css files added
 > - Altered `printyear`
 > - Changed date format
+> - Firebase implementation
 
 **Future Additions**
 > Portable application
