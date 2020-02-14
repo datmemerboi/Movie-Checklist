@@ -1,6 +1,7 @@
 from PyQt5 import QtWidgets
 import os, backupnow
 import mongo.insert as insert
+import FireBase.push as push
 recommendBool = False
 
 class ChecklistClass(object):
@@ -110,8 +111,8 @@ class ChecklistClass(object):
 		if(row):
 			if(self.dbChoose.currentText()=="MongoDB"):
 				insert.InsertCheckedFn(row, recommendBool)
-			else:
-				print(self.dbChoose.currentText())
+			elif(self.dbChoose.currentText()=="Firebase"):
+				push.PushToFirebase(row, recommendBool)
 
 	def NullCheckFn(self):
 		row = None
