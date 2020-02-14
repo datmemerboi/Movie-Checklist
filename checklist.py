@@ -1,6 +1,6 @@
 from PyQt5 import QtWidgets
 import os, backupnow
-import mongo.insertion
+import mongo.insert as insert
 recommendBool = False
 
 class ChecklistClass(object):
@@ -75,19 +75,18 @@ class ChecklistClass(object):
 		recommendBtn.setText("Recommend?")
 		recommendBtn.stateChanged.connect(lambda:self.RecommendFn())
 
-		dbChoose = QtWidgets.QComboBox(window)
-		dbChoose.setStyleSheet(inputCSS)
-		dbChoose.addItems(("MongoDB", "Firebase"))
-		dbChoose.move(315, 480)
-		dbChoose.resize(120, 30)
+		self.dbChoose = QtWidgets.QComboBox(window)
+		self.dbChoose.setStyleSheet(inputCSS)
+		self.dbChoose.addItems(("MongoDB", "Firebase"))
+		self.dbChoose.move(315, 480)
+		self.dbChoose.resize(120, 30)
 
 		addBtn = QtWidgets.QPushButton(window)
 		addBtn.setStyleSheet(buttonCSS)
 		addBtn.setText("Add")
 		addBtn.resize(70, 30)
 		addBtn.move(225, 535)
-		addBtn.clicked.connect(lambda: insertion.CheckExistingFn())
-		addBtn.clicked.connect(lambda: insertion.InsertCheckedFn())
+		addBtn.clicked.connect(lambda: self.WhereToSendFn())
 
 		updateBtn = QtWidgets.QPushButton(window)
 		updateBtn.setStyleSheet(buttonCSS)
@@ -105,3 +104,36 @@ class ChecklistClass(object):
 	def RecommendFn(self):
 		global recommendBool
 		recommendBool = not(recommendBool)
+	
+	def WhereToSendFn(self):
+		row = self.NullCheckFn()
+		if(row):
+			if(self.dbChoose.currentText()=="MongoDB"):
+				insert.InsertCheckedFn(row, recommendBool)
+			else:
+				print(self.dbChoose.currentText())
+
+	def NullCheckFn(self):
+		row = None
+		if(self.title.text().strip()=='' or self.director.text().strip()=='' or self.year.text().strip()==''):
+			NullMessage = QtWidgets.QMessageBox()
+			NullMessage.setText("Missing few values")
+			NullMessage.setWindowTitle("Error!")
+			NullMessage.exec_()
+
+		elif(self.remarks.toPlainText().strip()==''):
+			row = {
+			"Title":self.title.text().strip(),
+			"Director":self.director.text().strip(),
+			"Year":self.year.text().strip(),
+			"Language":self.language.currentText()
+			}
+		else:
+			row = {
+			"Title":self.title.text().strip(),
+			"Director":self.director.text().strip(),
+			"Year":self.year.text().strip(),
+			"Language":self.language.currentText(),
+			"Remarks":self.remarks.toPlainText().strip()
+			}
+		return row

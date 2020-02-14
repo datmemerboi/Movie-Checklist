@@ -23,7 +23,6 @@ class PrintListClass(object):
 		for index in ( mongoconn.Movie.Checklist.find() ):
 			if(ListBox.toPlainText().strip()==""):
 				ListBox.setText(index['Title']+" | "+index['Director']+" | "+index['Year']+" | "+index['Language'])
-				# ListBox.setText("<html><b>"+index['Title']+"</b></html>| "+index['Director']+" | "+index['Year']+" | "+index['Language'])
 			else:
 				ListBox.resize(400, ListBox.sizeHint().height()+210)
 				ListBox.setText(ListBox.toPlainText().strip()+"\n\n"+index['Title']+" | "+index['Director']+" | "+index['Year']+" | "+index['Language'])
