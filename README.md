@@ -1,6 +1,6 @@
 Movie Checklist
 =
-## Python 3 | PyQt5 | MongoDB | MongoClient
+## Python 3 | PyQt5 | MongoDB | MongoClient | Firebase
 
 As an avid movie lover, I have a large list of movies completed and yet to watch. As I had to keep track of them, here's an application to checklist the movies you have completed.
 
