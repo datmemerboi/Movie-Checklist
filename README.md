@@ -7,7 +7,7 @@ As an avid movie lover, I have a large list of movies completed and yet to watch
 Built on Linux environment (*elementary OS*)
 
 ### Requirements
-**Python, PyQt5, MongoDB** and **MongoClient**. After installing them, just run `index.py`.
+**Python, PyQt5, MongoDB, MongoClient** and **Firebase**. After installing them, just run `index.py`.
 Running `setup.py` would help you install the required softwares. (Built for Linux system, please do check if it works for Windows)
 
 ### Note 
@@ -17,6 +17,8 @@ Default Mongo connection:`mongodb://localhost:27017`
 Database: `Movie`
 
 Collection: `Checklist`, `Recommend`
+
+Firebase Database: paste URL of your DB `FirebaseApplication("`*here*`", authentication=None)` in `FireBase/push.py` 
 
 **Working till date**
 > - Basic Build of app
