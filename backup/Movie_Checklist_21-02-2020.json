@@ -152,3 +152,4 @@
 {"_id":{"$oid":"5e3ee00ae481f91f7c3f3ef2"},"Title":"Kanda Naal Mudhal","Director":"V Priya","Year":"2005","Language":"Tamil"}
 {"_id":{"$oid":"5e4fb34bece7aa9189709c15"},"Title":"Ferris Beuller's Day Off","Director":"John Hughes","Year":"1986","Language":"English"}
 {"_id":{"$oid":"5e4fb3acece7aa9189709c1f"},"Title":"Always Be My Maybe","Director":"Nahnatchka Khan","Year":"2019","Language":"English"}
+{"_id":{"$oid":"5e4fd5395d3fb965855c5b12"},"Title":"Murder Mystery","Director":"Kyle Newacheck","Year":"2019","Language":"English"}
