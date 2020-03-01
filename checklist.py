@@ -2,6 +2,7 @@ from PyQt5 import QtWidgets
 import os, backupnow
 import mongo.insert as insert
 import FireBase.push as push
+
 recommendBool = False
 
 class ChecklistClass(object):
@@ -32,11 +33,11 @@ class ChecklistClass(object):
 
 		searchMenu = menuBar.addMenu("Search")
 		searchByDirector = searchMenu.addAction("By Director")
-		searchByDirector.triggered.connect(lambda: os.system("python3 printdirector.py"))
+		searchByDirector.triggered.connect(lambda: os.system("python3 miniwin/printdirector.py"))
 		searchByYear = searchMenu.addAction("By Year")
-		searchByYear.triggered.connect(lambda: os.system("python3 printyear.py"))
+		searchByYear.triggered.connect(lambda: os.system("python3 miniwin/printyear.py"))
 		searchByLang = searchMenu.addAction("By Language")
-		searchByLang.triggered.connect(lambda: os.system("python3 printlanguage.py"))
+		searchByLang.triggered.connect(lambda: os.system("python3 miniwin/printlanguage.py"))
 		
 		self.title = QtWidgets.QLineEdit(window)
 		self.title.setStyleSheet(inputCSS)
@@ -100,7 +101,7 @@ class ChecklistClass(object):
 		printListBtn.resize(180, 30)
 		printListBtn.move(215, 590)
 		printListBtn.setText("Print Checklist")
-		printListBtn.clicked.connect(lambda: os.system("python3 printlist.py"))
+		printListBtn.clicked.connect(lambda: os.system("python3 miniwin/printlist.py"))
 
 	def RecommendFn(self):
 		global recommendBool
