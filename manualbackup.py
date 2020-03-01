@@ -1,5 +1,5 @@
-# Manually importing backup into Mongodb
-# Run file as such: python3 manualbackup.py backup/filetobebackedup_date_time.json
+# Manually importing backup JSON into Mongodb
+# Run file as: python3 manualbackup.py backup/fileToBackUp_Date_Time.JSON
 
 import sys, os
 if __name__=="__main__":

@@ -1,29 +1,19 @@
-import os, re; from datetime import datetime
-thisyear = datetime.now().strftime("%Y")
-thismonth = datetime.now().strftime("%m")
-thisday = datetime.now().strftime("%d")
-print(thisyear, thismonth, thisday)
+# Automatically backup most recent backup JSON into MongoDB
 
-foundit = False
+import glob, os
 
-def findYear(argument):
-	global thisyear
-	if(re.findall(".*"+thisyear+".json", argument)):
-		return True
+allFiles = glob.glob('backup/Movie_Checklist_*.json')
+if(allFiles):
+	latest = max(allFiles, key = os.path.getctime)
+	print (latest)
+	os.system("mongoimport --db Movie --collection Checklist --type json --file "+latest)
+else:
+	print("No files for now")
 
-def findMonth(argument):
-	global thismonth
-	if(re.findall(".*"+thismonth+"-[0-9]{4}.json", argument)):
-		return True
-
-def findDay(argument):
-	global thisday, thismonth
-	if(re.findall(".*"+thisday+"-[0-9]{2}-[0-9]{4}.json", argument)):
-		return True
-
-for name in os.listdir("backup"):
-	YearRet = findYear(name)
-	MonthRet = findMonth(name)
-	DayRet = findDay(name)
-	if(YearRet and MonthRet and DayRet):
-		print(name+" is it")
+allFiles = glob.glob('backup/Movie_Recommend_*.json')
+if(allFiles):
+	latest = max(allFiles, key = os.path.getctime)
+	print (latest)
+	os.system("mongoimport --db Movie --collection Recommend --type json --file "+latest)
+else:
+	print("No files for now")
