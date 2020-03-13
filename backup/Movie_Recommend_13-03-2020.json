@@ -105,3 +105,4 @@
 {"_id":{"$oid":"5e2088d93e36ee101628f54c"},"Title":"A Clockwork Orange","Director":"Stanley Kubrick","Year":"1971","Language":"English","Remarks":"Singin' in the rain!!"}
 {"_id":{"$oid":"5e5b6debe7e29bf227326e5b"},"Title":"Thor:Ragnarok","Director":"Taika Waititi","Year":"2017","Language":"English","Remarks":"One of the best visuals"}
 {"_id":{"$oid":"5e64d122af426cc2517f2c4c"},"Title":"Rang De Basanti","Director":"Rakeysh Omprakash Mehra","Year":"2006","Language":"Hindi","Remarks":"Koi bhi desh perfect nahin hota.. usse perfect banana padta hai"}
+{"_id":{"$oid":"5e6b9ff1b3dd4029f8caaa18"},"Title":"Knives Out","Director":"Rian Johnson","Year":"2019","Language":"English","Remarks":"Whodunnit"}

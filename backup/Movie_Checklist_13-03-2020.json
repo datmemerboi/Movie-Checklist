@@ -160,3 +160,4 @@
 {"_id":{"$oid":"5e5e5092404b6f2edd143a17"},"Title":"Pa Paandi","Director":"Dhanush","Year":"2017","Language":"Tamil"}
 {"_id":{"$oid":"5e61276801c7a78de661cdbf"},"Title":"Uyare","Director":"Manu Ashokan","Year":"2019","Language":"Malayalam"}
 {"_id":{"$oid":"5e64d120af426cc2517f2c49"},"Title":"Rang De Basanti","Director":"Rakeysh Omprakash Mehra","Year":"2006","Language":"Hindi","Remarks":"Koi bhi desh perfect nahin hota.. usse perfect banana padta hai"}
+{"_id":{"$oid":"5e6b9ff0b3dd4029f8caaa15"},"Title":"Knives Out","Director":"Rian Johnson","Year":"2019","Language":"English","Remarks":"Whodunnit"}
