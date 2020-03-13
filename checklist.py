@@ -1,6 +1,6 @@
 from PyQt5 import QtWidgets
 import os, backupnow
-import mongo.insert as insert
+import mongo.insert as insert; import mongo.update as update;
 import FireBase.push as push
 
 recommendBool = False
@@ -95,6 +95,8 @@ class ChecklistClass(object):
 		updateBtn.setText("Update")
 		updateBtn.resize(70, 30)
 		updateBtn.move(310, 535)
+		updateBtn.clicked.connect(lambda:self.UpdateRowFn())
+		updateBtn
 
 		printListBtn = QtWidgets.QPushButton(window)
 		printListBtn.setStyleSheet(buttonCSS)
@@ -139,3 +141,7 @@ class ChecklistClass(object):
 			"Remarks":self.remarks.toPlainText().strip()
 			}
 		return row
+
+	def UpdateRowFn(self):
+		row = self.NullCheckFn()
+		update.SearchRowFn(row)
