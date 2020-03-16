@@ -95,8 +95,7 @@ class ChecklistClass(object):
 		updateBtn.setText("Update")
 		updateBtn.resize(70, 30)
 		updateBtn.move(310, 535)
-		updateBtn.clicked.connect(lambda:self.UpdateRowFn())
-		updateBtn
+		# updateBtn.clicked.connect(lambda:self.UpdateRowFn())
 
 		printListBtn = QtWidgets.QPushButton(window)
 		printListBtn.setStyleSheet(buttonCSS)
@@ -142,6 +141,5 @@ class ChecklistClass(object):
 			}
 		return row
 
-	def UpdateRowFn(self):
-		row = self.NullCheckFn()
-		update.SearchRowFn(row)
+	# def UpdateRowFn(self):
+	# 	row = self.NullCheckFn()
