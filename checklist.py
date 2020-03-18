@@ -1,6 +1,6 @@
 from PyQt5 import QtWidgets
 import os, backupnow
-import mongo.insert as insert; import mongo.update as update;
+import mongo.insert as insert
 import FireBase.push as push
 
 recommendBool = False
@@ -38,6 +38,9 @@ class ChecklistClass(object):
 		searchByYear.triggered.connect(lambda: os.system("python3 miniwin/printyear.py"))
 		searchByLang = searchMenu.addAction("By Language")
 		searchByLang.triggered.connect(lambda: os.system("python3 miniwin/printlanguage.py"))
+
+		updateMenu = menuBar.addAction("Update")
+		updateMenu.triggered.connect(lambda: os.system("python3 updatewindow.py"))
 		
 		self.title = QtWidgets.QLineEdit(window)
 		self.title.setStyleSheet(inputCSS)
@@ -58,51 +61,51 @@ class ChecklistClass(object):
 		self.year.setPlaceholderText("Year")
 
 		self.language = QtWidgets.QComboBox(window)
-		self.language.addItems(('English', 'Tamil', 'Malayalam', 'Hindi', 'Others'))
 		self.language.setStyleSheet(inputCSS)
 		self.language.resize(120,35)
 		self.language.move(325, 235)
+		self.language.addItems(('English', 'Tamil', 'Malayalam', 'Hindi', 'Others'))
 
 		self.remarks = QtWidgets.QTextEdit(window)
 		self.remarks.setStyleSheet(inputCSS+"padding-top:15;")
-		self.remarks.setPlaceholderText("Remarks, if any..")
 		self.remarks.resize(350, 150)
 		self.remarks.move(125, 315)
+		self.remarks.setPlaceholderText("Remarks, if any..")
 
 		recommendBtn = QtWidgets.QCheckBox(window)
 		recommendBtn.setChecked(False)
 		recommendBtn.setStyleSheet(buttonCSS)
 		recommendBtn.resize(125, 30)
-		recommendBtn.move(165, 480)
+		recommendBtn.move(245, 480)
 		recommendBtn.setText("Recommend?")
 		recommendBtn.stateChanged.connect(lambda:self.RecommendFn())
-
-		self.dbChoose = QtWidgets.QComboBox(window)
-		self.dbChoose.setStyleSheet(inputCSS)
-		self.dbChoose.addItems(("MongoDB", "Firebase"))
-		self.dbChoose.move(315, 480)
-		self.dbChoose.resize(120, 30)
 
 		addBtn = QtWidgets.QPushButton(window)
 		addBtn.setStyleSheet(buttonCSS)
 		addBtn.setText("Add")
 		addBtn.resize(70, 30)
-		addBtn.move(225, 535)
+		addBtn.move(215, 530)
 		addBtn.clicked.connect(lambda: self.WhereToSendFn())
 
-		updateBtn = QtWidgets.QPushButton(window)
-		updateBtn.setStyleSheet(buttonCSS)
-		updateBtn.setText("Update")
-		updateBtn.resize(70, 30)
-		updateBtn.move(310, 535)
-		# updateBtn.clicked.connect(lambda:self.UpdateRowFn())
+		self.dbChoose = QtWidgets.QComboBox(window)
+		self.dbChoose.setStyleSheet(inputCSS)
+		self.dbChoose.addItems(("MongoDB", "Firebase"))
+		self.dbChoose.resize(120, 30)
+		self.dbChoose.move(315, 530)
 
-		printListBtn = QtWidgets.QPushButton(window)
-		printListBtn.setStyleSheet(buttonCSS)
-		printListBtn.resize(180, 30)
-		printListBtn.move(215, 590)
-		printListBtn.setText("Print Checklist")
-		printListBtn.clicked.connect(lambda: os.system("python3 miniwin/printlist.py"))
+		showChecklistBtn = QtWidgets.QPushButton(window)
+		showChecklistBtn.setStyleSheet(buttonCSS)
+		showChecklistBtn.resize(150, 30)
+		showChecklistBtn.move(135, 590)
+		showChecklistBtn.setText("Show Checklist")
+		showChecklistBtn.clicked.connect(lambda: os.system("python3 miniwin/printlist.py"))
+
+		showRecommendedBtn = QtWidgets.QPushButton(window)
+		showRecommendedBtn.setStyleSheet(buttonCSS)
+		showRecommendedBtn.resize(150, 30)
+		showRecommendedBtn.move(315, 590)
+		showRecommendedBtn.setText("Show Recommended")
+		showRecommendedBtn.clicked.connect(lambda: os.system("python3 miniwin/printrecommended.py"))
 
 	def RecommendFn(self):
 		global recommendBool
@@ -140,6 +143,3 @@ class ChecklistClass(object):
 			"Remarks":self.remarks.toPlainText().strip()
 			}
 		return row
-
-	# def UpdateRowFn(self):
-	# 	row = self.NullCheckFn()
