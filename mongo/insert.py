@@ -17,10 +17,14 @@ def InsertCheckedFn(row, recommendBool):
 	if(not(CheckExistingFn(row))):
 		mongoconn = MongoClient("mongodb://localhost:27017")
 		query = mongoconn.Movie.Checklist.update(row, row, upsert = True)
-		CheckedMessage = QtWidgets.QMessageBox()
-		CheckedMessage.setText("Added to checklist")
-		CheckedMessage.setWindowTitle("Done!")
-		CheckedMessage.exec_()
+		ChecklistMessage = QtWidgets.QMessageBox()
+		ChecklistMessage.setText("Added to checklist")
+		ChecklistMessage.setWindowTitle("Done!")
+		ChecklistMessage.exec_()
 		if(recommendBool):
 			query = mongoconn.Movie.Recommend.update(row, row, upsert=True)
+			RecommendMessage = QtWidgets.QMessageBox()
+			RecommendMessage.setText("Added to Recommended")
+			RecommendMessage.setWindowTitle("Done!")
+			RecommendMessage.exec_()
 		mongoconn.close()
