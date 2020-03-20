@@ -162,3 +162,6 @@
 {"_id":{"$oid":"5de69f95c0c58b3ab1a915da"},"Title":"John Wick Chapter 3 - Parabellum","Director":"Chad Stahelski","Year":"2019","Language":"English"}
 {"_id":{"$oid":"5e6fb432dc10332c7f768031"},"Title":"The Lighthouse","Director":"Robert Eggers","Year":"2019","Language":"English","Remarks":"WHAT? WHAT!"}
 {"_id":{"$oid":"5e72254a626e9c2635a88124"},"Title":"Super Deluxe","Director":"Thiagarajan Kumararaja","Year":"2019","Language":"Tamil","Remarks":"Yellamey naa... puriyudhu le?"}
+{"_id":{"$oid":"5e749a8995ad65d7a94acbc9"},"Title":"Scarface","Director":"Brian De Palma","Year":"1983","Language":"English","Remarks":"Say Hello to My Little Friend"}
+{"_id":{"$oid":"5e749aa995ad65d7a94acbd3"},"Title":"Bala","Director":"Amar Kaushik","Year":"2019","Language":"Hindi"}
+{"_id":{"$oid":"5e749ada95ad65d7a94acbe7"},"Title":"Annayum Rasoolum","Director":"Rajeev Ravi","Year":"2013","Language":"Malayalam","Remarks":"Fahad List"}
