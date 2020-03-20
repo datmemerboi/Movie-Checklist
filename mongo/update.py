@@ -2,11 +2,16 @@ from pymongo import MongoClient
 from PyQt5 import QtWidgets
 
 def UpdateIdRowFn(fromRow, toRow):
-	fromID = FindIdFn(fromRow, 'Checklist')
-	if(fromID):
+	checklistID = FindIdFn(fromRow, 'Checklist')
+	if(checklistID):
 		mongoconn = MongoClient("mongodb://localhost:27017")
+		if("Remarks" in fromRow.keys() and "Remarks" not in toRow.keys()):
+			mongoconn.Movie.Checklist.update(
+				{ '_id':checklistID },
+				{ '$unset': { 'Remarks':1 } }
+				);
 		query = mongoconn.Movie.Checklist.update_one(
-			{ '_id':fromID },
+			{ '_id':checklistID },
 			{ '$set':toRow }
 			);
 		mongoconn.close()
@@ -21,11 +26,16 @@ def UpdateIdRowFn(fromRow, toRow):
 			ErrorMessage.setWindowTitle("Error!")
 			ErrorMessage.exec_()
 
-	fromID = FindIdFn(fromRow, 'Recommend')
-	if(fromID):
+	recommmendID = FindIdFn(fromRow, 'Recommend')
+	if(recommmendID):
 		mongoconn = MongoClient("mongodb://localhost:27017")
+		if("Remarks" in fromRow.keys() and "Remarks" not in toRow.keys()):
+			mongoconn.Movie.Recommend.update(
+				{ '_id':recommmendID },
+				{ '$unset': { 'Remarks':1 } }
+				);
 		query = mongoconn.Movie.Recommend.update_one(
-			{ '_id':fromID },
+			{ '_id':recommmendID },
 			{ '$set':toRow }
 			);
 		mongoconn.close()
