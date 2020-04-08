@@ -1,6 +1,7 @@
-import sys
+# Entry point of application. Run python3 index.py to launch application
+
+import sys, window, checklist
 from PyQt5 import QtWidgets, QtGui
-import window, checklist
 
 if __name__ == '__main__':
 	app = QtWidgets.QApplication(sys.argv)

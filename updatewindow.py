@@ -1,8 +1,18 @@
+# Create window for Updation of records
+'''
+UpdateWindowClass.UpdateWindowFn() creates UI of app
+FillOld() automatically fills input while typing
+LtoRFn() pushes all input from Left to Right( Old to New)
+CreateRow() creates from and to rows
+WhereToSendFn():
+	create From & To rows
+	determines location to send,
+	call necessary function imported
+'''
+
 import sys
-from PyQt5 import QtWidgets
-from pymongo import MongoClient
-import mongo.update as update
-import FireBase.put as put
+from PyQt5 import QtWidgets; from pymongo import MongoClient
+import mongo.update as update; import FireBase.put as put
 
 class UpdateWindowClass(object):
 	def UpdateWindowFn(self, window):

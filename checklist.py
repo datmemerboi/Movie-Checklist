@@ -1,7 +1,8 @@
-from PyQt5 import QtWidgets
-import os, backupnow
-import mongo.insert as insert
-import FireBase.push as push
+# Contains entire UI of the application
+
+from PyQt5 import QtWidgets; import os
+from backup import backupnow
+import mongo.insert as insert; import FireBase.push as push
 
 recommendBool = False
 
