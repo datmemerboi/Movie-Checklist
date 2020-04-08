@@ -2,13 +2,15 @@ Movie Checklist
 =
 ## Python 3 | PyQt5 | MongoDB | MongoClient | Firebase
 
-As an avid movie lover, I have a large list of movies completed and yet to watch. As I had to keep track of them, here's an application to checklist the movies you have completed.
+As an avid movie lover, I have a large list of movies completed and yet to watch. As I had to keep track of them, here's an application to checklist the movies completed.
 
 Built on Linux environment (*elementary OS*)
 
 ### Requirements
-**Python, PyQt5, MongoDB, MongoClient** and **Firebase**. After installing them, just run `index.py`.
-Running `setup.py` would help you install the required softwares. (Built for Linux system, please do check if it works for Windows)
+
+**Python, PyQt5, MongoDB** software and **PyMongo.MongoClient** and **Firebase** modules.
+After installing them, just run *index.py*.
+Running *setup.py* would help you install the required softwares (Built for Linux system)
 
 ### Note 
 
@@ -18,29 +20,14 @@ Database: `Movie`
 
 Collection: `Checklist`, `Recommend`
 
-Firebase Database: paste URL of your DB `FirebaseApplication("`*here*`", authentication=None)` in `FireBase/push.py` 
+Firebase Database: paste URL of your Realtime DB in *Firebase/push.py*, *Firebase/put.py* and *MongotoFirebase.py* as `FirebaseApplication("`App URL`", authentication=None)` 
 
-**Working till date**
-> - Basic Build of app
-> - Seperate CSS files
-> - Screenshots
-> - Improved Print Checklist
-> - Improved Print Checklist
-> - Fixed Window size
-> - `setup.py` file
-> - Empty Data Entry check
-> - Existing Data alert 
-> - Recommend Button added
-> - `RecommendFn` included
-> - `.gitignore` file added
-> - minor changes in existing code
-> - Data backup
+**Application functionalities**
+> - Checklist of Movies (Title, Director, Year, Language, Remarks)
+> - Recommend list of Movies
+> - Backup Data into JSON file
 > - Search Director's Works, by Year, by Language
-> - UI for completed list
-> - css files added
-> - Altered `printyear`
-> - Changed date format
-> - Firebase implementation
+> - Push checklist to Firebase DB
 
 **Future Additions**
 > Portable application
