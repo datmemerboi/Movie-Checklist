@@ -1,3 +1,10 @@
+# Push data to Firbase Realtime Database
+'''
+PushToFirebase() requires:
+-	Row to be pushed to Checklist/
+-	bool variable True: Push to Recommend/, False: Not to
+'''
+
 from firebase import firebase
 from PyQt5 import QtWidgets
 
