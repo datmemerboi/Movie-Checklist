@@ -13,6 +13,7 @@ class SearchLangClass(object):
 		window.setFixedSize(500, 500)
 
 		path = os.path.join( os.path.dirname(__file__), "..", "css/" )
+		
 		File = open(path+"input.css", 'r')
 		inputCSS = File.read().strip()
 		File.close()

@@ -13,6 +13,7 @@ class ShowRecommendedClass(object):
 		window.setWindowTitle("Your Recommended List")
 
 		path = os.path.join( os.path.dirname(__file__), "..", "css/" )
+		
 		File = open(path+"list.css", 'r')
 		listCSS = File.read().strip()
 		File.close()

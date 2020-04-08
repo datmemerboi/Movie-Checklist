@@ -13,6 +13,7 @@ class PrintListClass(object):
 		window.setWindowTitle("Your Current List")
 
 		path = os.path.join( os.path.dirname(__file__), "..", "css/" )
+		
 		File = open(path+"list.css", 'r')
 		listCSS = File.read().strip()
 		File.close()
