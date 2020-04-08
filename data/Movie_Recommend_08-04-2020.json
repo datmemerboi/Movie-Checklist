@@ -112,3 +112,24 @@
 {"_id":{"$oid":"5e7c76a4b563a9e3ede95c38"},"Title":"Full Metal Jacket","Director":"Stanley Kubrick","Year":"1987","Language":"English"}
 {"_id":{"$oid":"5e8478f5d944d52f0563298d"},"Title":"The Meyerowitz Stories (New and Selected)","Director":"Noah Baumbach","Year":"2017","Language":"English","Remarks":"Pretty good for what was expected"}
 {"_id":{"$oid":"5e8d810e5f9183849d5929c0"},"Title":"6 Underground","Director":"Michael Bay","Year":"2019","Language":"English","Remarks":"Great Soundtrack"}
+{"_id":{"$oid":"5e8d86b95f9183849d592baa"},"Title":"Kadhalikka Neramillai","Director":"C V Sridhar","Year":"1964","Language":"Tamil","Remarks":"Classic comedy fests"}
+{"_id":{"$oid":"5e8d87215f9183849d592bca"},"Title":"Drive","Director":"Nicolas Winding Refn","Year":"2011","Language":"English","Remarks":"Neo-noirs"}
+{"_id":{"$oid":"5e8d87525f9183849d592bea"},"Title":"Primal Fear","Director":"Gregory Hoblit","Year":"1996","Language":"English"}
+{"_id":{"$oid":"5e8d87ec5f9183849d592c4f"},"Title":"Heat","Director":"Michael Mann","Year":"1995","Language":"English","Remarks":"You never wanted a regular-type life?"}
+{"_id":{"$oid":"5e8d88105f9183849d592c5b"},"Title":"Collateral","Director":"Michael Mann","Year":"2004","Language":"English"}
+{"_id":{"$oid":"5e8d884d5f9183849d592cd7"},"Title":"Unbreakable","Director":"M. Night Shyamalan","Year":"2000","Language":"English"}
+{"_id":{"$oid":"5e8d88655f9183849d592ce3"},"Title":"Split","Director":"M. Night Shyamalan","Year":"2016","Language":"English"}
+{"_id":{"$oid":"5e8d88715f9183849d592cef"},"Title":"Glass","Director":"M. Night Shyamalan","Year":"2019","Language":"English"}
+{"_id":{"$oid":"5e8d88ca5f9183849d592d1d"},"Title":"Superbad","Director":"Greg Mottola","Year":"2007","Language":"English"}
+{"_id":{"$oid":"5e8d88ff5f9183849d592d3d"},"Title":"The Shawshank Redemption","Director":"Frank Darabont","Year":"1994","Language":"English"}
+{"_id":{"$oid":"5e8d893e5f9183849d592d5d"},"Title":"Popstar: Never Stop Never Stopping","Director":"Jorma Taccone, Akiva Schaffer","Year":"2016","Language":"English"}
+{"_id":{"$oid":"5e8d898f5f9183849d592e22"},"Title":"Get Out","Director":"Jordan Peele","Year":"2017","Language":"English"}
+{"_id":{"$oid":"5e8d89b05f9183849d592e42"},"Title":"Us","Director":"Jordan Peele","Year":"2019","Language":"English"}
+{"_id":{"$oid":"5e8d8ac65f9183849d592eb2"},"Title":"Goodfellas","Director":"Martin Scorsese","Year":"1990","Language":"English"}
+{"_id":{"$oid":"5e8d8ae15f9183849d592ebe"},"Title":"Taxi Driver","Director":"Martin Scorsese","Year":"1976","Language":"English","Remarks":"You talking to me..?"}
+{"_id":{"$oid":"5e8d8af85f9183849d592eca"},"Title":"Casino","Director":"Martin Scorsese","Year":"1995","Language":"English"}
+{"_id":{"$oid":"5e8d8b1e5f9183849d592ed6"},"Title":"The Wolf of Wall Street","Director":"Martin Scorsese","Year":"2013","Language":"English","Remarks":"I'M NOT FUCKIN LEAVING!!!"}
+{"_id":{"$oid":"5e8d8b3c5f9183849d592ee6"},"Title":"The Departed","Director":"Martin Scorsese","Year":"2006","Language":"English"}
+{"_id":{"$oid":"5e8d8b475f9183849d592ef2"},"Title":"Shutter Island","Director":"Martin Scorsese","Year":"2010","Language":"English"}
+{"_id":{"$oid":"5e8d8bd35f9183849d592f3a"},"Title":"12 Angry Men","Director":"Sidney Lumet","Year":"1957","Language":"English"}
+{"_id":{"$oid":"5e8d8c395f9183849d592fce"},"Title":"No Country for Old Men","Director":"Coen Brothers","Year":"2007","Language":"English"}
