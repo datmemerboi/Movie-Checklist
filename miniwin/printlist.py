@@ -2,7 +2,7 @@
 # PrintListClass.PrintListFn() will create the UI and display the checklist
 
 
-import sys
+import sys, os
 from PyQt5 import QtWidgets
 from pymongo import MongoClient
 
@@ -12,7 +12,8 @@ class PrintListClass(object):
 		window.setStyleSheet("background-color:rgb(0,0,0);")
 		window.setWindowTitle("Your Current List")
 
-		File = open("./css/list.css", 'r')
+		path = os.path.join( os.path.dirname(__file__), "..", "css/" )
+		File = open(path+"list.css", 'r')
 		listCSS = File.read().strip()
 		File.close()
 

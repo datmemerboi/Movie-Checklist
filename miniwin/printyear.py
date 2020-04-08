@@ -2,7 +2,7 @@
 # SearchYearClass.SearchYearFn() will create the UI
 # PrintYearFn(Window, Year) will display movies of the Year in Window
 
-import sys
+import sys, os
 from PyQt5 import QtWidgets
 from pymongo import MongoClient
 
@@ -12,13 +12,14 @@ class SearchYearClass(object):
 		window.setWindowTitle("Search Year")
 		window.setFixedSize(500, 500)
 
-		File = open("./css/input.css", 'r')
+		path = os.path.join( os.path.dirname(__file__), "..", "css/" )
+		File = open(path+"input.css", 'r')
 		inputCSS = File.read().strip()
 		File.close()
-		File = open("./css/list.css", 'r')
+		File = open(path+"list.css", 'r')
 		listCSS = File.read().strip()
 		File.close()
-		File = open("./css/count.css", 'r')
+		File = open(path+"count.css", 'r')
 		countCSS = File.read().strip()
 		File.close()
 		

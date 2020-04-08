@@ -1,15 +1,15 @@
-# Create a Mini Window for Works of a particular director
-# DirectorWorksClass.DirectorWorksFn() will create the UI
-# PrintDirectorFn(Window, Director) will display the Director's works in Window
+# Create a Mini Window to Search particular title in checklist
+# SearchListClass.SearchListFn() will create the UI
+# PrintTitleFn(Window, Title) will display the records with the Title in Window
 
 import sys, os
 from PyQt5 import QtWidgets
 from pymongo import MongoClient
 
-class DirectorWorksClass(object):
-	def DirectorWorksFn(self, window):
+class SearchListClass(object):
+	def SearchListFn(self, window):
 		window.setStyleSheet("background-color:rgb(0,0,0);")
-		window.setWindowTitle("Director Works")
+		window.setWindowTitle("Search Checklist")
 		window.setFixedSize(500, 500)
 
 		path = os.path.join( os.path.dirname(__file__), "..", "css/" )
@@ -27,8 +27,8 @@ class DirectorWorksClass(object):
 		self.searchBar.setStyleSheet(inputCSS)
 		self.searchBar.resize(300, 45)
 		self.searchBar.move(105, 45)
-		self.searchBar.setPlaceholderText("Search for Director's Works")
-		self.searchBar.textChanged.connect(lambda: self.PrintDirectorFn(window, self.searchBar.text()))
+		self.searchBar.setPlaceholderText("Search term in checklist")
+		self.searchBar.textChanged.connect(lambda: self.PrintTitleFn(window, self.searchBar.text()))
 
 		self.countText = QtWidgets.QLabel(window)
 		self.countText.setStyleSheet(countCSS)
@@ -44,26 +44,26 @@ class DirectorWorksClass(object):
 		ListBoxScrollBar.setStyleSheet("border:none;");
 		self.ListBox.setVerticalScrollBar(ListBoxScrollBar)
 
-	def PrintDirectorFn(self, window, director):
+	def PrintTitleFn(self, window, title):
 		self.ListBox.setText(""); self.countText.setText("")
-		if(director != ""):
+		if(title != ""):
 			mongoconn = MongoClient("mongodb://localhost:27017")
-			for index in (mongoconn.Movie.Checklist.find({"Director":{'$regex' : director, '$options' : 'i'}})):
+			for record in (mongoconn.Movie.Checklist.find({"Title":{'$regex' : title, '$options' : 'i'}})):
 				if(self.ListBox.toPlainText().strip()==""):
-					self.ListBox.setText(index['Title']+" | "+index['Director']+" | "+index['Year']+" | "+index['Language'])
+					self.ListBox.setText(record['Title']+" | "+record['Director']+" | "+record['Year']+" | "+record['Language'])
 				else:
 					self.ListBox.resize(400, self.ListBox.sizeHint().height()+80)
-					self.ListBox.setText(self.ListBox.toPlainText().strip()+"\r\r"+index['Title']+" | "+index['Director']+" | "+index['Year']+" | "+index['Language'])
-				if('Remarks' in index and index['Remarks']!=""):
-					self.ListBox.setText(self.ListBox.toPlainText().strip()+" | \""+index['Remarks']+"\"")
+					self.ListBox.setText(self.ListBox.toPlainText().strip()+"\r\r"+record['Title']+" | "+record['Director']+" | "+record['Year']+" | "+record['Language'])
+				if('Remarks' in record and record['Remarks']!=""):
+					self.ListBox.setText(self.ListBox.toPlainText().strip()+" | \""+record['Remarks']+"\"")
 			self.ListBox.setReadOnly(True)
 			self.countText.setText(
-				str(mongoconn.Movie.Checklist.find({"Director":{'$regex' : director, '$options' : 'i'}}).count())
+				str(mongoconn.Movie.Checklist.find({"Title":{'$regex' : title, '$options' : 'i'}}).count())
 				+" records")
 			mongoconn.close()
 
 miniapp = QtWidgets.QApplication(sys.argv)
 MiniWindow = QtWidgets.QMainWindow()
-DirectorWorksClass().DirectorWorksFn(MiniWindow)
+SearchListClass().SearchListFn(MiniWindow)
 MiniWindow.show()
 sys.exit(miniapp.exec_())
