@@ -1,3 +1,7 @@
+# Mini window for movies in particular year
+# SearchYearClass.SearchYearFn() will create the UI
+# PrintYearFn(Window, Year) will display movies of the Year in Window
+
 import sys
 from PyQt5 import QtWidgets
 from pymongo import MongoClient

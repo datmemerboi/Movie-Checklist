@@ -1,3 +1,7 @@
+# Create a Mini Window for Works of a particular director
+# DirectorWorksClass.DirectorWorksFn() will create the UI
+# PrintDirectorFn(Window, Director) will display the Director's works in Window
+
 import sys
 from PyQt5 import QtWidgets
 from pymongo import MongoClient

@@ -1,6 +1,11 @@
+# Window of entire recommended list
+# ShowRecommendedClass.ShowRecommendedFn() will create the UI and display the recommended list
+
+
 import sys
 from PyQt5 import QtWidgets
 from pymongo import MongoClient
+
 class ShowRecommendedClass(object):
 	def ShowRecommendedFn(self, window):
 		window.setFixedSize(600, 600)

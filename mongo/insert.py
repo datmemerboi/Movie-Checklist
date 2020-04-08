@@ -1,3 +1,12 @@
+# Insert a row into MongoDB
+'''
+CheckExistingFn(row) checks presence of Title & Director combo in MongoDB
+InsertCheckedFn(Row, recommendBool):
+-	checks existing or not
+-	inserts row into MongoDB checklist
+-	inserts row into MongoDB Recommend list based on recommendBool (True / False)
+'''
+
 from pymongo import MongoClient
 from PyQt5 import QtWidgets
 

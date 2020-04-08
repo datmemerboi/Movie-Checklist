@@ -1,3 +1,7 @@
+# Mini window for movies of particular language
+# SearchLangClass.SearchLangFn() will create the UI
+# PrintLangFn(Window, Language) will display the Language movies in Window
+
 import sys
 from PyQt5 import QtWidgets
 from pymongo import MongoClient

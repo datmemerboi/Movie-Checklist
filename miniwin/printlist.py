@@ -1,6 +1,11 @@
+# Window of entire checklist
+# PrintListClass.PrintListFn() will create the UI and display the checklist
+
+
 import sys
 from PyQt5 import QtWidgets
 from pymongo import MongoClient
+
 class PrintListClass(object):
 	def PrintListFn(self, window):
 		window.setFixedSize(600, 600)
