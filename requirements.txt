@@ -1,0 +1,8 @@
+pyqt5
+pymongo
+firebase
+python_jwt
+gcloud
+sseclient
+pycrypto
+requests-toolbelt
