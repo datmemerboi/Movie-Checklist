@@ -33,6 +33,8 @@ class ChecklistClass(object):
 		backupRecommendedMenu.triggered.connect(lambda: backupnow.BackupNowFn("Movie", "Recommend"))
 
 		searchMenu = menuBar.addMenu("Search")
+		searchCheclist = searchMenu.addAction("By Title")
+		searchCheclist.triggered.connect(lambda: os.system("python3 miniwin/searchlist.py"))
 		searchByDirector = searchMenu.addAction("By Director")
 		searchByDirector.triggered.connect(lambda: os.system("python3 miniwin/printdirector.py"))
 		searchByYear = searchMenu.addAction("By Year")
