@@ -32,9 +32,7 @@ def CompareFromToFn(fromRow, toRow):
 	return toRow
 
 def PutFirebaseIdRowFn(fromRow, toRow):
-	print(fromRow, toRow, " before..")		
 	newToRow = CompareFromToFn(fromRow, toRow)
-	print(newToRow," after")
 	
 	checklistID = FindFirebaseIdFn(fromRow, "Checklist/"); recommendID = FindFirebaseIdFn(fromRow, "Recommend/")
 
