@@ -28,7 +28,7 @@
 {"_id":{"$oid":"5d9448b794c9cb56434dddb0"},"Title":"Mugamoodi","Director":"Mysskin","Year":"2012","Language":"Tamil"}
 {"_id":{"$oid":"5db87b2191ec0914777e7a29"},"Title":"Aalavandhan","Director":"Suresh Krishna","Year":"2001","Language":"Tamil"}
 {"_id":{"$oid":"5d94500694c9cb56434dddb5"},"Title":"Jackie Brown","Director":"Quentin Tarantino","Year":"1997","Language":"English"}
-{"_id":{"$oid":"5d6036c61068d5b41524cf2f"},"Title":"Mard Ko Dard Nahi Hota","Director":"Vasan Bala","Year":"2019","Language":"Others","Remarks":"Awesome movie"}
+{"_id":{"$oid":"5d6036c61068d5b41524cf2f"},"Title":"Mard Ko Dard Nahi Hota","Director":"Vasan Bala","Year":"2019","Language":"Hindi","Remarks":"Awesome movie"}
 {"_id":{"$oid":"5d603db51068d5b41524cf30"},"Title":"Game Over","Director":"Ashwin Saravanan","Year":"2019","Language":"Tamil"}
 {"_id":{"$oid":"5d62c63ebf8fd585374b2909"},"Title":"Rope","Director":"Alfred Hitchcock","Year":"1948","Language":"English"}
 {"_id":{"$oid":"5d94503c94c9cb56434dddb7"},"Title":"Kill Bill: Vol 2","Director":"Quentin Tarantino","Year":"2004","Language":"English","Remarks":"Blood Red"}
@@ -175,7 +175,7 @@
 {"_id":{"$oid":"5e89b8557dacc54017b063ad"},"Title":"Sigappu Rojakkal","Director":"Bharathiraja","Year":"1978","Language":"Tamil"}
 {"_id":{"$oid":"5e89b8987dacc54017b063bc"},"Title":"American Hustle","Director":"David O. Russell","Year":"2013","Language":"English"}
 {"_id":{"$oid":"5e8d810d5f9183849d5929bd"},"Title":"6 Underground","Director":"Michael Bay","Year":"2019","Language":"English","Remarks":"Great Soundtrack"}
-{"_id":{"$oid":"5e8d815d5f9183849d5929c9"},"Title":"21 grams","Director":"Alejandro  Inarritu","Year":"2003","Language":"English"}
+{"_id":{"$oid":"5e8d815d5f9183849d5929c9"},"Title":"21 grams","Director":"Alejandro Inarritu","Year":"2003","Language":"English"}
 {"_id":{"$oid":"5e8d86b85f9183849d592ba7"},"Title":"Kadhalikka Neramillai","Director":"C V Sridhar","Year":"1964","Language":"Tamil","Remarks":"Classic comedy fests"}
 {"_id":{"$oid":"5e8d87205f9183849d592bc7"},"Title":"Drive","Director":"Nicolas Winding Refn","Year":"2011","Language":"English","Remarks":"Neo-noirs"}
 {"_id":{"$oid":"5e8d87515f9183849d592be7"},"Title":"Primal Fear","Director":"Gregory Hoblit","Year":"1996","Language":"English"}
@@ -198,3 +198,7 @@
 {"_id":{"$oid":"5e8d8b465f9183849d592eef"},"Title":"Shutter Island","Director":"Martin Scorsese","Year":"2010","Language":"English"}
 {"_id":{"$oid":"5e8d8bd25f9183849d592f37"},"Title":"12 Angry Men","Director":"Sidney Lumet","Year":"1957","Language":"English"}
 {"_id":{"$oid":"5e8d8c385f9183849d592fcb"},"Title":"No Country for Old Men","Director":"Coen Brothers","Year":"2007","Language":"English"}
+{"_id":{"$oid":"5e90171b293c31f048b3cf91"},"Title":"Birdman or (The Unexpected Virtue of Ignorance)","Director":"Alejandro Inarritu","Year":"2014","Language":"English","Remarks":"Popularity is the slutty little cousin of prestige"}
+{"_id":{"$oid":"5e901784293c31f048b3cffd"},"Title":"The Aviator","Director":"Martin Scorsese","Year":"2005","Language":"English","Remarks":"DiCaprio streak"}
+{"_id":{"$oid":"5e92cb5033ecb42192b80646"},"Title":"Revolutionary Road","Director":"Sam Mendes","Year":"2008","Language":"English","Remarks":"DiCaprio streak"}
+{"_id":{"$oid":"5e92cbfd33ecb42192b806c2"},"Title":"1917","Director":"Sam Mendes","Year":"2019","Language":"English","Remarks":"Single Take movie"}
