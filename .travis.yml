@@ -4,7 +4,8 @@ python:
   3.6.9
 
 services:
-  MongoDB 4.2.5, Firebase 3.0.1
+  MongoDB 4.2.5
+  Firebase 3.0.1
   PyMongo 3.10.1
 
 sudo: required
@@ -13,6 +14,9 @@ install:
   pip3 install -r requirements.txt
 
 before_script:
+  sudo systemctl enable mongod.service
+  sudo systemctl start mongod.service
+  # Only for testing
   python3 backup/autobackup.py
   
 script:
