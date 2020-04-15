@@ -70,7 +70,7 @@
 {"_id":{"$oid":"5db87d1a91ec0914777e7a3e"},"Title":"Nayakan","Director":"Mani Ratnam","Year":"1987","Language":"Tamil"}
 {"_id":{"$oid":"5db8888791ec0914777e7a7d"},"Title":"Irreversible","Director":"Gaspar Noé","Year":"2002","Language":"Others"}
 {"_id":{"$oid":"5db8800691ec0914777e7a64"},"Title":"Vaayai Moodi Pesavum","Director":"Balaji Mohan","Year":"2014","Language":"Tamil","Remarks":"Sean Roldan intro"}
-{"_id":{"$oid":"5db87d6891ec0914777e7a45"},"Title":"Alaipayuthey","Director":"Mani Ratnam","Year":"2000","Language":"Tamil"}
+{"_id":{"$oid":"5db87d6891ec0914777e7a45"},"Title":"Alaipayuthey","Director":"Mani Ratnam","Year":"2000","Language":"Tamil","Remarks":"Nagila Nagila.."}
 {"_id":{"$oid":"5db8807691ec0914777e7a68"},"Title":"Groundhog Day","Director":"Harold Ramis","Year":"1993","Language":"English"}
 {"_id":{"$oid":"5db881ef91ec0914777e7a78"},"Title":"Peranbu","Director":"Ram","Year":"2019","Language":"Tamil"}
 {"_id":{"$oid":"5db87af891ec0914777e7a27"},"Title":"Anbe Sivam","Director":"Sundar C","Year":"2003","Language":"Tamil"}
@@ -202,3 +202,4 @@
 {"_id":{"$oid":"5e901784293c31f048b3cffd"},"Title":"The Aviator","Director":"Martin Scorsese","Year":"2005","Language":"English","Remarks":"DiCaprio streak"}
 {"_id":{"$oid":"5e92cb5033ecb42192b80646"},"Title":"Revolutionary Road","Director":"Sam Mendes","Year":"2008","Language":"English","Remarks":"DiCaprio streak"}
 {"_id":{"$oid":"5e92cbfd33ecb42192b806c2"},"Title":"1917","Director":"Sam Mendes","Year":"2019","Language":"English","Remarks":"Single Take movie"}
+{"_id":{"$oid":"5e96ad05b4fb9a6bf539ff70"},"Title":"The Great Gatsby","Director":"Baz Luhrmann","Year":"2013","Language":"English"}
