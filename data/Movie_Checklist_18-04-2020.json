@@ -106,7 +106,7 @@
 {"_id":{"$oid":"5de7a68cba7fac578b665b0b"},"Title":"Shazam!","Director":"David Sandberg","Year":"2019","Language":"English"}
 {"_id":{"$oid":"5db87fd091ec0914777e7a62"},"Title":"Mundasupatti","Director":"Ram Kumar","Year":"2014","Language":"Tamil"}
 {"_id":{"$oid":"5de52bc08b9a3a003c0b25cf"},"Title":"Vaaranam Aayiram","Director":"Gautham Vasudev Menon","Year":"2008","Language":"Tamil"}
-{"_id":{"$oid":"5de52e1194513d995168bc6b"},"Title":"What We Do in the Shadows","Director":"Taika Waititi","Year":"2014","Language":"English","Remarks":"Trick 'n Treat"}
+{"_id":{"$oid":"5de52e1194513d995168bc6b"},"Title":"What We Do in the Shadows","Director":"Taika Waititi, Jemaine Clement","Year":"2014","Language":"English","Remarks":"Trick 'n Treat"}
 {"_id":{"$oid":"5db87d4391ec0914777e7a43"},"Title":"Thiruda Thiruda","Director":"Mani Ratnam","Year":"1993","Language":"Tamil"}
 {"_id":{"$oid":"5e35c19bfff8af49ec5e577a"},"Title":"Dolemite Is My Name","Director":"Craig Brewer","Year":"2019","Language":"English"}
 {"_id":{"$oid":"5e2b31c19b26d2db423356cc"},"Title":"Psycho","Director":"Mysskin","Year":"2020","Language":"Tamil"}
@@ -203,3 +203,6 @@
 {"_id":{"$oid":"5e92cb5033ecb42192b80646"},"Title":"Revolutionary Road","Director":"Sam Mendes","Year":"2008","Language":"English","Remarks":"DiCaprio streak"}
 {"_id":{"$oid":"5e92cbfd33ecb42192b806c2"},"Title":"1917","Director":"Sam Mendes","Year":"2019","Language":"English","Remarks":"Single Take movie"}
 {"_id":{"$oid":"5e96ad05b4fb9a6bf539ff70"},"Title":"The Great Gatsby","Director":"Baz Luhrmann","Year":"2013","Language":"English"}
+{"_id":{"$oid":"5e996099a6984ccf322552b4"},"Title":"Tanu Weds Manu","Director":"Aanand L. Rai","Year":"2011","Language":"Hindi"}
+{"_id":{"$oid":"5e9960d1a6984ccf322552c5"},"Title":"The Revenant","Director":"Alejandro Inarritu","Year":"2016","Language":"English","Remarks":"DiCaprio streak"}
+{"_id":{"$oid":"5e9aa36e83c73f198ed6ac24"},"Title":"Crazy, Stupid, Love","Director":"Glenn Ficarra, John Requa","Year":"2011","Language":"English","Remarks":"Seriously? It's like you're Photoshopped"}

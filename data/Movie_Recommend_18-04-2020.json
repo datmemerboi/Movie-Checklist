@@ -78,7 +78,7 @@
 {"_id":{"$oid":"5dd441f7a2ad0e679d914b5a"},"Title":"The World's End","Director":"Edgar Wright","Year":"2013","Language":"English"}
 {"_id":{"$oid":"5e2088b13e36ee101628f53c"},"Title":"The Shining","Director":"Stanley Kubrick","Year":"1980","Language":"English","Remarks":"Here's Johnny!"}
 {"_id":{"$oid":"5dbc36558f91ed13362ebccf"},"Title":"Raw","Director":"Julia Ducournau","Year":"2016","Language":"Others"}
-{"_id":{"$oid":"5dd186214ccce6756a2fe46a"},"Title":"What We Do in the Shadows","Director":"Taika Waititi","Year":"2014","Language":"English","Remarks":"Vampire Style!"}
+{"_id":{"$oid":"5dd186214ccce6756a2fe46a"},"Title":"What We Do in the Shadows","Director":"Taika Waititi, Jemaine Clement","Year":"2014","Language":"English","Remarks":"Trick 'n Treat"}
 {"_id":{"$oid":"5df9e8fcf540840221b11247"},"Title":"Maheshinte Prathikaaram","Director":"Dileesh Pothan","Year":"2016","Language":"Malayalam"}
 {"_id":{"$oid":"5e36b634aa6541b70f85652f"},"Title":"Jojo Rabbit","Director":"Taika Waititi","Year":"2020","Language":"English","Remarks":"Hi, Adolf"}
 {"_id":{"$oid":"5db87b2291ec0914777e7a2a"},"Title":"Aalavandhan","Director":"Suresh Krishna","Year":"2001","Language":"Tamil"}
@@ -136,3 +136,6 @@
 {"_id":{"$oid":"5e90171c293c31f048b3cf94"},"Title":"Birdman or (The Unexpected Virtue of Ignorance)","Director":"Alejandro Inarritu","Year":"2014","Language":"English","Remarks":"Popularity is the slutty little cousin of prestige"}
 {"_id":{"$oid":"5e901785293c31f048b3d000"},"Title":"The Aviator","Director":"Martin Scorsese","Year":"2005","Language":"English","Remarks":"DiCaprio streak"}
 {"_id":{"$oid":"5e92cb5233ecb42192b80649"},"Title":"Revolutionary Road","Director":"Sam Mendes","Year":"2008","Language":"English","Remarks":"DiCaprio streak"}
+{"_id":{"$oid":"5e996099a6984ccf322552b7"},"Title":"Tanu Weds Manu","Director":"Aanand L. Rai","Year":"2011","Language":"Hindi"}
+{"_id":{"$oid":"5e9960d2a6984ccf322552c8"},"Title":"The Revenant","Director":"Alejandro Inarritu","Year":"2016","Language":"English","Remarks":"DiCaprio streak"}
+{"_id":{"$oid":"5e9aa36f83c73f198ed6ac27"},"Title":"Crazy, Stupid, Love","Director":"Glenn Ficarra, John Requa","Year":"2011","Language":"English","Remarks":"Seriously? It's like you're Photoshopped"}
