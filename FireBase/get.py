@@ -3,7 +3,7 @@
 
 from firebase import firebase
 
-firebase = firebase.FirebaseApplication("https://movie-checklist-6969.firebaseio.com/", authentication=None)
+firebase = firebase.FirebaseApplication("", authentication=None)
 
 def FirebaseGet(Collection):
 	print("Reading", Collection)
