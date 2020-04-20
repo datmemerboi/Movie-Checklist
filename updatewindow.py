@@ -165,7 +165,7 @@ class UpdateWindowClass(object):
 			if(self.dbChoose.currentText()=="MongoDB"):
 				update.UpdateIdRowFn(fromRow, toRow)
 			elif(self.dbChoose.currentText()=="Firebase"):
-				put.PutFirebaseIdRowFn(fromRow, toRow)
+				put.PutFbaseRowFn(fromRow, toRow)
 
 miniapp = QtWidgets.QApplication(sys.argv)
 MiniWindow = QtWidgets.QMainWindow()

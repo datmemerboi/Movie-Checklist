@@ -2,47 +2,52 @@
 '''
 FindFirebaseIdFn(Row, Collection) to find the ID of mentioned Row in firebase/Collection/
 CompareFromToFn(from, to) to compare and filter only necessary key,value pairs
-PutFirebaseIdRowFn(from, to) used aforementioned fns to update from into to
+PutFbaseRowFn(from, to) used aforementioned fns to update from into to
 '''
 
 from firebase import firebase
 firebase = firebase.FirebaseApplication("", authentication=None)
 from PyQt5 import QtWidgets
 
-def FindFirebaseIdFn(fromRow, Collection):
-	findRes = firebase.get(str(Collection), None)
-	for index in range(len(findRes)):
-		if( list(findRes.values())[index]['Title']==fromRow['Title'] and
-			list(findRes.values())[index]['Director']==fromRow['Director']
-		 ):
-			return list(findRes.keys())[index]
-	return
+def FbaseFromRowFn(mongoFrom, Collection):
+	findRes = firebase.get( Collection, None)
+	for index in range( len(findRes) ):
+		if( list(findRes.values())[index]['Title']==mongoFrom['Title'] and
+			list(findRes.values())[index]['Director']==mongoFrom['Director'] ):
+			return list(findRes.keys())[index] , list(findRes.values())[index]
+	return False
 
-def CompareFromToFn(fromRow, toRow):
-	if(fromRow['Title']==toRow['Title']):
-		toRow.pop('Title', None)
-	if(fromRow['Director']==toRow['Director']):
-		toRow.pop('Director', None)
-	if(fromRow['Year']==toRow['Year']):
-		toRow.pop('Year', None)
-	if(fromRow['Language']==toRow['Language']):
-		toRow.pop('Language', None)
-	if('Remarks' in fromRow.keys() and 'Remarks' in toRow.keys() and fromRow['Remarks']==toRow['Remarks'] ):
-		toRow.pop('Remarks', None)
-	return toRow
-
-def PutFirebaseIdRowFn(fromRow, toRow):
-	newToRow = CompareFromToFn(fromRow, toRow)
+def EliminateKeys(From, To):
+	if(From['Title']==To['Title']):
+		To.pop('Title', None)
 	
-	checklistID = FindFirebaseIdFn(fromRow, "Checklist/"); recommendID = FindFirebaseIdFn(fromRow, "Recommend/")
-
-	if('Remarks' in fromRow.keys() and 'Remarks' not in toRow):
-		firebase.delete('Checklist/'+checklistID+"/Remarks", None)
-		firebase.delete('Recommend/'+recommendID+"/Remarks", None)
+	if(From['Director']==To['Director']):
+		To.pop('Director', None)
 	
-	for eachKey in newToRow:
-		if(checklistID):
-			if( firebase.put( 'Checklist/'+checklistID,eachKey, newToRow[eachKey] ) ):
+	if(From['Year']==To['Year']):
+		To.pop('Year', None)
+	
+	if(From['Language']==To['Language']):
+		To.pop('Language', None)
+	
+	if('Remarks' in From.keys() and 'Remarks' in To.keys() and From['Remarks']==To['Remarks'] ):
+		To.pop('Remarks', None)
+
+	return To
+
+def PutFbaseRowFn(mongoFrom, toRow):
+	checklistID, checklistRow = FbaseFromRowFn( mongoFrom, 'Checklist')
+	recommendID, recommenedRow = FbaseFromRowFn( mongoFrom, 'Recommend')
+
+	checklistRow = EliminateKeys(dict(checklistRow), dict(toRow))
+	recommenedRow = EliminateKeys(dict(recommenedRow), dict(toRow))
+	
+	if checklistID:
+		if('Remarks' in mongoFrom.keys() and 'Remarks' not in checklistRow.keys() ):
+			firebase.delete('Checklist/'+checklistID+"/Remarks", None)
+		
+		for each in checklistRow.keys():
+			if( firebase.put( 'Checklist/'+checklistID, each, checklistRow[each] ) ):
 				UpdateMessage = QtWidgets.QMessageBox()
 				UpdateMessage.setText("Updated checklist")
 				UpdateMessage.setWindowTitle("Updated!")
@@ -53,8 +58,12 @@ def PutFirebaseIdRowFn(fromRow, toRow):
 				ErrorMessage.setWindowTitle("Error!")
 				ErrorMessage.exec_()
 
-		if(recommendID):
-			if( firebase.put( 'Recommend/'+recommendID,eachKey, newToRow[eachKey] ) ):
+	if recommendID:
+		if('Remarks' in mongoFrom.keys() and 'Remarks' not in recommenedRow.keys() ):
+			firebase.delete('Recommend/'+recommendID+"/Remarks", None)
+		
+		for each in recommenedRow.keys():
+			if( firebase.put( 'Recommend/'+recommendID, each, recommenedRow[each] ) ):
 				UpdateMessage = QtWidgets.QMessageBox()
 				UpdateMessage.setText("Updated recommened")
 				UpdateMessage.setWindowTitle("Updated!")
