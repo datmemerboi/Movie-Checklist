@@ -7,7 +7,7 @@
 {"_id":{"$oid":"5da5ced33061d02b634d6dab"},"Title":"The Dark Knight","Director":"Christopher Nolan","Year":"2008","Language":"English"}
 {"_id":{"$oid":"5d77bc8924913465f34d1061"},"Title":"Rashomon","Director":"Akira Kurosawa","Year":"1950","Language":"Others","Remarks":"Japanese Classics"}
 {"_id":{"$oid":"5d9448c294c9cb56434dddb1"},"Title":"Yuddham Sei","Director":"Mysskin","Year":"2011","Language":"Tamil"}
-{"_id":{"$oid":"5d9448a794c9cb56434dddaf"},"Title":"Onaayum Aattukkuttiyum","Director":"Mysskin","Year":"2013","Language":"Tamil","Remarks":"Recommend"}
+{"_id":{"$oid":"5d9448a794c9cb56434dddaf"},"Title":"Onaayum Aattukkuttiyum","Director":"Mysskin","Year":"2013","Language":"Tamil","Remarks":"One of the best single take scenes EVER!!"}
 {"_id":{"$oid":"5d8bb5a986279fb0d519824a"},"Title":"Boy","Director":"Taika Waititi","Year":"2010","Language":"English"}
 {"_id":{"$oid":"5d94504b94c9cb56434dddb8"},"Title":"Death Proof","Director":"Quentin Tarantino","Year":"2007","Language":"English"}
 {"_id":{"$oid":"5d77bc7524913465f34d1060"},"Title":"Seven Samurai","Director":"Akira Kurosawa","Year":"1954","Language":"Others","Remarks":"Japanese Classics"}
@@ -206,3 +206,4 @@
 {"_id":{"$oid":"5e996099a6984ccf322552b4"},"Title":"Tanu Weds Manu","Director":"Aanand L. Rai","Year":"2011","Language":"Hindi"}
 {"_id":{"$oid":"5e9960d1a6984ccf322552c5"},"Title":"The Revenant","Director":"Alejandro Inarritu","Year":"2016","Language":"English","Remarks":"DiCaprio streak"}
 {"_id":{"$oid":"5e9aa36e83c73f198ed6ac24"},"Title":"Crazy, Stupid, Love","Director":"Glenn Ficarra, John Requa","Year":"2011","Language":"English","Remarks":"Seriously? It's like you're Photoshopped"}
+{"_id":{"$oid":"5e9d611de217355697360141"},"Title":"Jaane Tu... Ya Jaane Na","Director":"Abbas Tyrewala","Year":"2006","Language":"Hindi","Remarks":"Could watch for AR Rahman and Genelia"}
