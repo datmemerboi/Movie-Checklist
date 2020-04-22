@@ -1,9 +1,7 @@
 # Get data from Firebase Realtime db
+# Firebase app from cred.py
 
-
-from firebase import firebase
-
-firebase = firebase.FirebaseApplication("", authentication=None)
+from cred import firebase
 
 def FirebaseGet(Collection):
 	print("Reading", Collection)
@@ -27,4 +25,5 @@ def FirebaseGet(Collection):
 
 if __name__ == '__main__':
 	FirebaseGet('Checklist')
+	print("\n=== ===\n")
 	FirebaseGet('Recommend')

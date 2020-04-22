@@ -1,26 +1,31 @@
 # Push data to Firbase Realtime Database
 '''
-PushToFirebase() requires:
--	Row to be pushed to Checklist/
--	bool variable True: Push to Recommend/, False: Not to
+PushToChecklist(row) posts row in Firebase db (obtained from cred.py)
+PushToRecommend(row) posts row in Firebase db (obtained from cred.py)
+PushToFirebase() decides which functions to call
 '''
 
-from firebase import firebase
+from cred import firebase
 from PyQt5 import QtWidgets
 
-firebase = firebase.FirebaseApplication("", authentication=None)
-
-def PushToFirebase(row, recommendBool):
+def PushToChecklist(row):
 	checklistResult = firebase.post('Checklist/', row)
-	if recommendBool :
-		recommendResult = firebase.post('Recommend/', row)
 	if checklistResult :
 		CheckedMessage = QtWidgets.QMessageBox()
 		CheckedMessage.setText("Added to Firebase checlist")
 		CheckedMessage.setWindowTitle("Done!")
 		CheckedMessage.exec_()
+
+def PushToRecommend(row):
+	recommendResult = firebase.post('Recommend/', row)
 	if recommendResult :
 		CheckedMessage = QtWidgets.QMessageBox()
 		CheckedMessage.setText("Added to Firebase Recommended")
 		CheckedMessage.setWindowTitle("Done!")
 		CheckedMessage.exec_()
+
+def PushToFirebase(row, recommendBool):
+	PushToChecklist(row)
+	if recommendBool :
+		PushToRecommend(row)
+		

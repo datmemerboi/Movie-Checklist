@@ -3,12 +3,13 @@ To backup data from Firebase Realtime db
 FileName(Collection) will return the filename for the Collection
 GetFirebase(Collection) will get all records from Collection
 FBbackupNowFn(Collection) will use above fns to create a JSON backup file
-'''
-import os, json
-from datetime import datetime
-from firebase import firebase
 
-firebase = firebase.FirebaseApplication("", authentication=None)
+Firebase app from ..Firebase.cred.py
+'''
+import os, json, sys
+from datetime import datetime
+sys.path.append('..')
+from FireBase.cred import firebase
 
 def FileName(Collection):
 	now = datetime.now().strftime("%d-%m-%Y")
@@ -37,8 +38,7 @@ def FBbackupNowFn(Collection):
 		}
 		if 'Remarks' in records[index].keys():
 			row['Remarks'] = records[index]['Remarks']
-		else:
-			print( records[index]['Title'])
+
 		json.dump(row, File)
 		File.write('\n')
 	File.close()

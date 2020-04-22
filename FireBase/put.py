@@ -1,12 +1,12 @@
 # Update data on Firebase Realtime Database
 '''
-FindFirebaseIdFn(Row, Collection) to find the ID of mentioned Row in firebase/Collection/
-CompareFromToFn(from, to) to compare and filter only necessary key,value pairs
+Firebase ID obtained from cred.py
+FbaseFromRowFn(from, Collection) will find the actual row in Firebase db
+EliminateKeys(from, to) remove the same values in ToRow
 PutFbaseRowFn(from, to) used aforementioned fns to update from into to
 '''
 
-from firebase import firebase
-firebase = firebase.FirebaseApplication("", authentication=None)
+from cred import firebase
 from PyQt5 import QtWidgets
 
 def FbaseFromRowFn(mongoFrom, Collection):

@@ -1,10 +1,9 @@
 # Push chosen collection to Firebase Realtime Database
 # Application works on cmd line interface only
-
+# Firebase app from Firebase.cred.py
 import os
-from firebase import firebase; from pymongo import MongoClient
-
-firebase = firebase.FirebaseApplication("", authentication=None)
+from pymongo import MongoClient
+from FireBase.cred import firebase
 
 def __main__():
 	coll = input("Choose Collection (C/R) or Q to quit: ").upper()
