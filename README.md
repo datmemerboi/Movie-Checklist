@@ -20,7 +20,7 @@ Database: `Movie`
 
 Collection: `Checklist`, `Recommend`
 
-Firebase Database: paste URL of your Realtime DB in *Firebase/push.py*, *Firebase/put.py* and *MongotoFirebase.py* as `FirebaseApplication("`App URL`", authentication=None)` 
+Firebase Database: paste URL of your Realtime DB in *Firebase/cred.py* as `FirebaseApplication("`App URL`", authentication=None)`. The same url will be used for all Firebase interactions
 
 **Application functionalities**
 > - Checklist of Movies (Title, Director, Year, Language, Remarks)
