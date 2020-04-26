@@ -6,7 +6,7 @@ EliminateKeys(from, to) remove the same values in ToRow
 PutFbaseRowFn(from, to) used aforementioned fns to update from into to
 '''
 
-from cred import firebase
+from .cred import firebase
 from PyQt5 import QtWidgets
 
 def FbaseFromRowFn(mongoFrom, Collection):

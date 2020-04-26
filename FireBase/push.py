@@ -5,7 +5,7 @@ PushToRecommend(row) posts row in Firebase db (obtained from cred.py)
 PushToFirebase() decides which functions to call
 '''
 
-from cred import firebase
+from .cred import firebase
 from PyQt5 import QtWidgets
 
 def PushToChecklist(row):
