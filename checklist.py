@@ -1,8 +1,8 @@
 # Contains entire UI of the application
 
-from PyQt5 import QtWidgets; import os
-from backup import backupnow
-import mongo.insert as insert; import FireBase.push as push
+from PyQt5 import QtWidgets; from datetime import datetime;
+from backup import backupnow; import mongo.insert as insert; import FireBase.push as push;
+import os;
 
 recommendBool = False
 
@@ -135,7 +135,8 @@ class ChecklistClass(object):
 			"Title":self.title.text().strip(),
 			"Director":self.director.text().strip(),
 			"Year":self.year.text().strip(),
-			"Language":self.language.currentText()
+			"Language":self.language.currentText(),
+			"DateTime":datetime.today().strftime("%B %d, %Y %H:%M:%S")
 			}
 		else:
 			row = {
@@ -143,6 +144,7 @@ class ChecklistClass(object):
 			"Director":self.director.text().strip(),
 			"Year":self.year.text().strip(),
 			"Language":self.language.currentText(),
-			"Remarks":self.remarks.toPlainText().strip()
+			"Remarks":self.remarks.toPlainText().strip(),
+			"DateTime":datetime.today().strftime("%B %d, %Y %H:%M:%S")
 			}
 		return row
