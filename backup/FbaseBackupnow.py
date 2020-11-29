@@ -6,16 +6,18 @@ FBbackupNowFn(Collection) will use above fns to create a JSON backup file
 
 Firebase app from ..Firebase.cred.py
 '''
-import os, json, sys
+import os
+import sys
+import json
 from datetime import datetime
+
 sys.path.append('..')
 from FireBase.cred import firebase
 
 def FileName(Collection):
 	now = datetime.now().strftime("%d-%m-%Y")
-	filename = "Movie_"+Collection+"_"+now+".json"
-	
-	pathfile = os.path.join( os.path.dirname(os.path.realpath(__file__)), "..", "data", filename)
+	filename = "Movie"+"_"+ Collection +"_"+ now +".json"
+	pathfile = os.path.abspath(os.path.join(os.path.dirname(os.path.realpath(__file__)), "..", "data", filename))
 
 	return pathfile
 
@@ -39,7 +41,7 @@ def FBbackupNowFn(Collection):
 		if 'Remarks' in records[index].keys():
 			row['Remarks'] = records[index]['Remarks']
 
-		json.dump(row, File)
+		json.dump(row, File, indent = 4, ensure_ascii = False)
 		File.write('\n')
 	File.close()
 

@@ -6,11 +6,11 @@ from datetime import datetime
 
 def BackupNowFn(database, collection):
 	now = datetime.now().strftime("%d-%m-%Y")
-	filename = database+"_"+collection+"_"+now
+	filename = database +"_"+ collection +"_"+ now +".json"
 	
-	path = os.path.join( os.path.dirname(os.path.realpath(__file__)), "../data/")
+	path = os.path.abspath(os.path.join(os.path.dirname(os.path.realpath(__file__)), "..", "data"))
 
-	query = "mongoexport --db "+database+" --collection "+collection+" --out "+path+filename+".json"
+	query = "mongoexport --db "+ database +" --collection "+ collection +" --out "+ path + filename
 	
 	os.system(query)
 

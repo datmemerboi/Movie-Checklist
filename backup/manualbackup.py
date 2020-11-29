@@ -15,7 +15,7 @@ def main():
 	spl = sys.argv[1].strip('.json').split('_')
 	database = spl[0]; collection = spl[1]
 	
-	os.system("mongoimport --db "+database+" --collection "+collection+" --type json --file "+path+filename)
+	os.system("mongoimport --db "+ database +" --collection "+ collection +" --type json --file "+ path + filename)
 
 if __name__=="__main__":
 	main()
